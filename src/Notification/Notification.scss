@@ -1,0 +1,30 @@
+.notification__container {
+  position: relative;
+  top: 10px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.notification {
+  position: absolute;
+  padding: 10px 50px;
+  opacity: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  color: white;
+  opacity: 0.8;
+  &.mount {
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  &.unmount {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+}
