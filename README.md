@@ -1,3 +1,27 @@
+# Notification
+
+A React Notification component with Context API
+```diff
+ReactDOM.render(
+  <React.StrictMode>
++   <NotificationProvider>
+      <App />
++   </NotificationProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+```
+```
+function App(){
+  const { open } = useNotification();
+  // other code
+  
+  open({ message: "success", type: "success", duration: 3000 })
+  
+  // ...
+}
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
